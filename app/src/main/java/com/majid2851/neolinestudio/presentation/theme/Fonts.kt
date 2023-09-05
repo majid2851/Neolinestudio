@@ -5,6 +5,7 @@ import com.majid2851.neolinestudio.presentation.util.ssp
 
 
 val Fonts_Equal_30px @Composable get() = 30.ssp
+val Fonts_Equal_28px @Composable get() = 28.ssp
 val Fonts_Equal_26px @Composable get() = 26.ssp
 val Fonts_Equal_25px @Composable get() = 25.ssp
 val Fonts_Equal_24px @Composable get() = 24.ssp

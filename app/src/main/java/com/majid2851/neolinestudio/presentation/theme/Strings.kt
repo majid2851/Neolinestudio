@@ -33,6 +33,13 @@ const val St_This_Transaction=
 const val St_BackHome="Back Home Screen"
 const val St_Comments="Comments"
 const val St_Reply="Reply"
+const val St_Reactions="Reaction"
+const val St_Post="Post"
+const val St_Home="Home"
+const val St_Discover="Discover"
+const val St_NFT="NFTMarket"
+const val St_Element="More"
+const val St_Profile="Profile"
 
 
 

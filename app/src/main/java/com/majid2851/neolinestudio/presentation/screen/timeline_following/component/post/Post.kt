@@ -8,15 +8,15 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import com.majid2851.neolinestudio.domain.model.PostData
 import com.majid2851.neolinestudio.presentation.theme.Black14
 import com.majid2851.neolinestudio.presentation.theme.Dimen.MediumCorner
-import com.majid2851.personalwallet.presentation.theme.St_Fake_Hashtack
-import com.majid2851.personalwallet.presentation.theme.St_Fake_Text1
 import com.walletline.android.presentation.theme.Padding.extraSmall
 import com.walletline.android.presentation.theme.Padding.small
 
 @Composable
 fun Post(
+    postModel:PostData,
     showBid:Boolean=true,
     onBidClick:()->Unit,
     onCommentClick:()->Unit
@@ -33,15 +33,16 @@ fun Post(
     )
     {
 
-        PostToolbar()
+        PostToolbar(postModel=postModel)
 
         Spacer(modifier = Modifier.height(extraSmall))
+
         PostContent(
-            text1 = St_Fake_Text1,
-            hashtack = St_Fake_Hashtack
+            postModel=postModel,
         )
 
         PostTabs(
+            postModel=postModel,
             onCommentClick={
                 onCommentClick()
             }

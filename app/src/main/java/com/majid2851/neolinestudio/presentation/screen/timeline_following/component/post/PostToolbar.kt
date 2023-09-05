@@ -15,10 +15,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.text.font.FontWeight
 import com.majid2851.neolinestudio.R
+import com.majid2851.neolinestudio.domain.model.PostData
 import com.majid2851.neolinestudio.presentation.component.ImgBox
 import com.majid2851.neolinestudio.presentation.theme.Dimen
 import com.majid2851.neolinestudio.presentation.theme.Dimen.MoreSize
@@ -27,21 +26,16 @@ import com.majid2851.neolinestudio.presentation.theme.Dimen.PostToolbarSmallCirc
 import com.majid2851.neolinestudio.presentation.theme.Dimen.PostToolbarSmallImg
 import com.majid2851.neolinestudio.presentation.theme.GrayCB
 import com.majid2851.neolinestudio.presentation.theme.MyBush
-import com.majid2851.neolinestudio.presentation.theme.OrangeF0
-import com.majid2851.neolinestudio.presentation.theme.PinkED
-import com.majid2851.neolinestudio.presentation.theme.PinkF3
 import com.majid2851.neolinestudio.presentation.theme.White
 import com.majid2851.neolinestudio.presentation.theme.proDisplay
 import com.majid2851.personalwallet.presentation.theme.Fonts_Equal_10px
 import com.majid2851.personalwallet.presentation.theme.Fonts_Equal_11px
-import com.majid2851.personalwallet.presentation.theme.Fonts_Equal_12px
 import com.majid2851.personalwallet.presentation.theme.Fonts_Equal_13px
 import com.majid2851.personalwallet.presentation.theme.Fonts_Equal_16px
 import com.walletline.android.presentation.theme.Padding.extraSmall
-import com.walletline.android.presentation.theme.Padding.small
 
 @Composable
-fun PostToolbar()
+fun PostToolbar(postModel: PostData)
 {
     Row(
         verticalAlignment = Alignment.CenterVertically
@@ -58,7 +52,7 @@ fun PostToolbar()
                     )
         )
         {
-            ImgBox(img = R.drawable.test_profile)
+            ImgBox(img = postModel.profileImg)
         }
 
         Spacer(modifier = Modifier.width(extraSmall))
@@ -71,7 +65,7 @@ fun PostToolbar()
             {
 
                 Text(
-                    text = "Albert901",
+                    text = postModel.userName,
                     fontSize = Fonts_Equal_16px,
                     color = White,
                     fontWeight = FontWeight.Medium,
@@ -96,7 +90,7 @@ fun PostToolbar()
             )
             {
                 Text(
-                    text = "albert901",
+                    text = postModel.name,
                     fontSize = Fonts_Equal_11px,
                     color = GrayCB,
                     fontWeight = FontWeight.Medium,
@@ -121,7 +115,7 @@ fun PostToolbar()
 
 
                 Text(
-                    text = "5m",
+                    text = postModel.time,
                     fontSize = Fonts_Equal_10px,
                     color = GrayCB,
                     fontWeight = FontWeight.Normal,

@@ -1,4 +1,4 @@
-package com.majid2851.neolinestudio.presentation.screen.timeline_following.component.custom_keyboard
+package com.majid2851.neolinestudio.presentation.screen.timeline_following.component.sheet_place_bid.custom_keyboard
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -119,6 +119,9 @@ fun CustomKeyboard(
                         .padding(extraSmall)
                         .fillMaxWidth()
                         .height(Dimen.KeyHeight)
+                        .clickable {
+                            onDeleteClick()
+                        }
 
                     ,
                     horizontalAlignment = Alignment.CenterHorizontally,
@@ -129,9 +132,6 @@ fun CustomKeyboard(
                     ImgBox(
                         img = R.drawable.symbol,
                         width = KeySymbolWidth,
-                        onClick = {
-                            onDeleteClick()
-                        }
                     )
                 }
 

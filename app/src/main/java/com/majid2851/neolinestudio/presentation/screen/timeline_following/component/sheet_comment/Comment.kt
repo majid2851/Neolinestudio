@@ -19,6 +19,7 @@ import androidx.compose.ui.text.font.FontWeight
 import com.majid2851.neolinestudio.R
 import com.majid2851.neolinestudio.presentation.component.ImgBox
 import com.majid2851.neolinestudio.presentation.theme.Dimen
+import com.majid2851.neolinestudio.presentation.theme.Dimen.PostToolbarImgSize
 import com.majid2851.neolinestudio.presentation.theme.GrayCB
 import com.majid2851.neolinestudio.presentation.theme.MyBush
 import com.majid2851.neolinestudio.presentation.theme.White
@@ -35,19 +36,12 @@ fun Comment()
         verticalAlignment = Alignment.CenterVertically
     )
     {
-        Box(
-            modifier= Modifier
-                .size(Dimen.PostToolbarImgSize)
-                .border(
-                    width = Dimen.BorderSmallWidth,
-                    shape = RoundedCornerShape(Dimen.VeryHighCorner),
-                    brush = MyBush
 
-                )
+        ImgBox(
+            img = R.drawable.test_profile,
+            width = PostToolbarImgSize,
+            height = PostToolbarImgSize
         )
-        {
-            ImgBox(img = R.drawable.test_profile)
-        }
 
         Spacer(modifier = Modifier.width(Padding.extraSmall))
 

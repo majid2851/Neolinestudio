@@ -45,9 +45,9 @@ fun ImgBox(
                 shape = RoundedCornerShape(corner),
                 color = Color.Transparent
             ))
-            .clickable {
-                onClick()
-            }
+//            .clickable {
+//                onClick()
+//            }
             .then(if (padding == null) Modifier.padding() else Modifier.padding(padding))
 )
     {

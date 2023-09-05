@@ -12,9 +12,15 @@ object Dimen
     val MediumCorner @Composable get()=9.sdp
     val HighCorner @Composable get()=14.sdp
     val VeryHighCorner @Composable get()=21.sdp
+    val VeryHighCorner2 @Composable get()=26.sdp
     val LineSeperator @Composable get()=1.sdp
+    val BorderVerySmallWidth @Composable get()=1.sdp
     val BorderSmallWidth @Composable get()=2.sdp
     val BorderMediumWidth @Composable get()=3.sdp
+    val NavigationButtonHeight @Composable get()=60.sdp
+    val NavButtonItemWidth @Composable get()=60.sdp
+    val NavButtonItemHeight @Composable get()=40.sdp
+    val NavButtonImgSize @Composable get()=18.sdp
 
 
     //Time_Line,Following------------------------------------
@@ -22,7 +28,7 @@ object Dimen
     val TimeLineTopToolbar_Width @Composable get()=225.sdp
     val TopCatsItemHeight @Composable get()=30.sdp
     val ProfileSize @Composable get()=60.sdp
-    val PostToolbarImgSize @Composable get()=35.sdp
+    val PostToolbarImgSize @Composable get()=40.sdp
     val PostToolbarSmallCircle @Composable get()=3.sdp
     val MoreSize @Composable get()=35.sdp
     val PostImgHeight @Composable get()=300.sdp
@@ -45,6 +51,7 @@ object Dimen
     val BidPlaceSuccessSize @Composable get()=75.sdp
     val CommentsHeight @Composable get()=230.sdp
     val ReplayMargin @Composable get()=39.sdp
+    val ImogyIconSize @Composable get()=30.sdp
 
 
 

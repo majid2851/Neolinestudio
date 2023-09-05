@@ -8,44 +8,50 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import com.majid2851.neolinestudio.R
+import com.majid2851.neolinestudio.domain.model.PostData
 import com.majid2851.neolinestudio.presentation.component.ImgBox
 import com.majid2851.neolinestudio.presentation.theme.Blue03
 import com.majid2851.neolinestudio.presentation.theme.Dimen.PostImgHeight
 import com.majid2851.neolinestudio.presentation.theme.White
 import com.majid2851.neolinestudio.presentation.theme.proDisplay
 import com.majid2851.personalwallet.presentation.theme.Fonts_Equal_15px
-import com.majid2851.personalwallet.presentation.theme.Fonts_Equal_16px
 import com.majid2851.personalwallet.presentation.theme.Fonts_Equal_22px
 
 @Composable
 fun PostContent(
-     text1:String,
-     hashtack:String
+    postModel: PostData
 )
 {
 
 
+    // Create an annotated string with customized styling for hashtags within a postModel.
     val combinedText = buildAnnotatedString {
+        // Apply a style with white color to the entire text.
         withStyle(style = SpanStyle(
             color = White
-
         )) {
-            append(text1)
+            // Append the original text from postModel.
+            append(postModel.text)
         }
 
+        // Define a regular expression to find hashtags (words starting with '#').
         val hashtagRegex = Regex("#\\w+")
-        val hashtags = hashtagRegex.findAll(hashtack)
-        var prevEnd=0
-        hashtags.forEachIndexed() { index,result ->
+        val hashtags = hashtagRegex.findAll(postModel.hashtak)
+        var prevEnd = 0
+
+        // Iterate through each hashtag found in the postModel.
+        hashtags.forEachIndexed { index, result ->
             val start = result.range.first
             val end = result.range.last + 1 // Include the '#' in the span
 
+            // Insert a space before hashtags (except the first one) for proper spacing.
             if (index > 0) {
                 val space = " "
                 append(space)
                 prevEnd += space.length
             }
 
+            // Apply a style with blue color to the hashtag, and add an annotation for future use.
             withStyle(style = SpanStyle(color = Blue03)) {
                 addStringAnnotation(
                     tag = "hashtag",
@@ -53,12 +59,15 @@ fun PostContent(
                     end = end,
                     annotation = ""
                 )
-                append(hashtack.substring(start, end))
+                // Append the hashtag text with the specified style.
+                append(postModel.hashtak.substring(start, end))
             }
         }
     }
 
+// Create a remember block to store the generated annotated string for later use.
     val annotatedString = remember { combinedText }
+
 
 
 
@@ -72,7 +81,7 @@ fun PostContent(
     )
 
     ImgBox(
-        img = R.drawable.frame_6714,
+        img = postModel.postImg,
         height = PostImgHeight
     )
 

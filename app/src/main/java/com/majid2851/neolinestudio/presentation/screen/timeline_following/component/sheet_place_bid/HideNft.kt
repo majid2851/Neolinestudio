@@ -1,4 +1,4 @@
-package com.majid2851.neolinestudio.presentation.screen.timeline_following.component.sheet_bid
+package com.majid2851.neolinestudio.presentation.screen.timeline_following.component.sheet_place_bid
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -22,7 +22,6 @@ import com.majid2851.personalwallet.presentation.theme.St_Hide
 import com.majid2851.personalwallet.presentation.theme.St_ThisNtf
 import com.majid2851.personalwallet.presentation.theme.St_YouCan
 import com.walletline.android.presentation.theme.Padding.extraSmall
-import com.walletline.android.presentation.theme.Padding.small
 
 @Composable
 fun HideNft()

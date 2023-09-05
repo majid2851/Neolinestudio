@@ -1,4 +1,4 @@
-package com.majid2851.neolinestudio.presentation.screen.timeline_following.component.sheet_bid
+package com.majid2851.neolinestudio.presentation.screen.timeline_following.component.sheet_place_bid
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -14,13 +14,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
-import com.majid2851.neolinestudio.presentation.screen.timeline_following.component.custom_keyboard.CustomKeyboard
+import com.majid2851.neolinestudio.presentation.screen.timeline_following.component.sheet_place_bid.custom_keyboard.CustomKeyboard
 import com.majid2851.neolinestudio.presentation.theme.Black
 import com.majid2851.neolinestudio.presentation.theme.Black14
 import com.majid2851.neolinestudio.presentation.theme.Dimen.BidSheetTobBoxHeight
 import com.majid2851.neolinestudio.presentation.theme.Dimen.BidSheetTopBoxWidth
 import com.majid2851.neolinestudio.presentation.theme.Dimen.HighCorner
-import com.majid2851.neolinestudio.presentation.theme.Dimen.MediumCorner
 import com.majid2851.neolinestudio.presentation.theme.White
 import com.majid2851.neolinestudio.presentation.theme.proDisplay
 import com.majid2851.personalwallet.presentation.theme.Fonts_Equal_10px

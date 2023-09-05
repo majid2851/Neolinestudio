@@ -22,6 +22,14 @@ sealed class TimeLineFollowingEvent
     object OnBackHomeClick:TimeLineFollowingEvent()
     object OnCommentSheetDismiss:TimeLineFollowingEvent()
     object OnCommentClick:TimeLineFollowingEvent()
+    data class OnCommentChange(val value:String):TimeLineFollowingEvent()
+
+
+    object OnNavHomeClick:TimeLineFollowingEvent()
+    object OnNavDiscoverClick:TimeLineFollowingEvent()
+    object OnNavNftMarketClick:TimeLineFollowingEvent()
+    object OnNavMoreClick:TimeLineFollowingEvent()
+    object OnNavProfileClick:TimeLineFollowingEvent()
 
 
 }

@@ -1,4 +1,4 @@
-package com.majid2851.neolinestudio.presentation.screen.timeline_following.component.sheet_bid
+package com.majid2851.neolinestudio.presentation.screen.timeline_following.component.sheet_place_bid
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -18,7 +18,6 @@ import com.majid2851.neolinestudio.presentation.theme.White
 import com.majid2851.neolinestudio.presentation.theme.proDisplay
 import com.majid2851.personalwallet.presentation.theme.Fonts_Equal_14px
 import com.majid2851.personalwallet.presentation.theme.Fonts_Equal_17px
-import com.majid2851.personalwallet.presentation.theme.St_SubmitBid
 import com.walletline.android.presentation.theme.Padding
 
 @Composable

@@ -32,7 +32,11 @@ import com.walletline.android.presentation.theme.Padding
 import com.walletline.android.presentation.theme.Padding.small
 
 @Composable
-fun SheetComment()
+fun SheetComment(
+    imogy:String,
+    commentValue:String,
+    onCommentChange:(String)->Unit
+)
 {
     Column(
         modifier = Modifier
@@ -98,8 +102,19 @@ fun SheetComment()
         Spacer(modifier = Modifier.height(Padding.medium))
 
 
+        Reactions(
+            imogy = imogy
+        )
 
 
+        Spacer(modifier = Modifier.height(Padding.medium))
+
+        AddComment(
+            commentValue =commentValue ,
+            onCommentChange = {
+                onCommentChange(it)
+            }
+        )
 
     }
 

@@ -4,10 +4,12 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import com.majid2851.neolinestudio.R
+import com.majid2851.neolinestudio.domain.model.PostData
 
 @Composable
 fun PostTabs(
-    onCommentClick:()->Unit
+    onCommentClick: () -> Unit,
+    postModel: PostData
 )
 {
     Row(
@@ -16,17 +18,17 @@ fun PostTabs(
     {
         TabItem(
             img = R.drawable.frame_180,
-            title ="245K",
+            title =postModel.likes,
             onItemClick = {}
         )
         TabItem(
             img =R.drawable.frame_1802 ,
-            title ="12",
+            title =postModel.commentsNum,
             onItemClick={onCommentClick()}
         )
         TabItem(
             img = R.drawable.vector,
-            title ="256K",
+            title =postModel.repostNum,
             onItemClick = {}
         )
         TabItem(
@@ -36,7 +38,7 @@ fun PostTabs(
         )
         TabItem(
             img = R.drawable.vector2,
-            title ="20K View",
+            title =postModel.viewNum,
             onItemClick = {}
         )
 

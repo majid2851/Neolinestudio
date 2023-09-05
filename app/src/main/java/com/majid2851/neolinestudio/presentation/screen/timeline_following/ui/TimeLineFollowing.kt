@@ -1,11 +1,15 @@
 package com.majid2851.personalwallet.presentation.screens.main_page.accounts.ui
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.runtime.Composable
@@ -17,15 +21,17 @@ import com.majid2851.neolinestudio.R
 import com.majid2851.neolinestudio.presentation.screen.timeline_following.component.People
 import com.majid2851.neolinestudio.presentation.screen.timeline_following.component.TopCats
 import com.majid2851.neolinestudio.presentation.screen.timeline_following.component.TopToolbar
+import com.majid2851.neolinestudio.presentation.screen.timeline_following.component.navigation_button.NavigationButton
 import com.majid2851.neolinestudio.presentation.screen.timeline_following.component.sheet_bid_success.BidPlaceSuccess
 import com.majid2851.neolinestudio.presentation.screen.timeline_following.component.post.Post
-import com.majid2851.neolinestudio.presentation.screen.timeline_following.component.sheet_bid.BidSheet
+import com.majid2851.neolinestudio.presentation.screen.timeline_following.component.sheet_place_bid.BidSheet
 import com.majid2851.neolinestudio.presentation.screen.timeline_following.component.sheet_comment.SheetComment
 import com.majid2851.neolinestudio.presentation.theme.Black
 import com.majid2851.neolinestudio.presentation.theme.White
 import com.majid2851.personalwallet.presentation.theme.St_YourCut
 import com.walletline.android.presentation.theme.Padding.medium
 import com.walletline.android.presentation.theme.Padding.small
+import com.walletline.android.presentation.theme.Padding.veryExtraLarge
 
 
 @Composable
@@ -34,8 +40,9 @@ fun TimeLineFollowing(
     event: (TimeLineFollowingEvent)->Unit,
 )
 {
-
-    Box()
+    Box(
+        modifier = Modifier.fillMaxSize()
+    )
     {
         Column(
             modifier= Modifier.fillMaxSize()
@@ -77,11 +84,11 @@ fun TimeLineFollowing(
 
                 LazyRow()
                 {
-                    items(10)
+                    items(state.people.size)
                     {
                         People(
-                            img = R.drawable.test_profile,
-                            name = "Damla",
+                            img = state.people[it].img,
+                            name = state.people[it].name,
                             backgroundColor = Black,
                             onItemClick = {
 
@@ -94,10 +101,14 @@ fun TimeLineFollowing(
 
 
             LazyColumn(
-                horizontalAlignment = Alignment.CenterHorizontally
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier
+                    .padding(bottom = veryExtraLarge)
+                    .fillMaxWidth()
+                    .background(Black)
             )
             {
-                items(2)
+                items(state.postData.size)
                 {
                     Post(
                         onBidClick = {
@@ -105,12 +116,25 @@ fun TimeLineFollowing(
                         },
                         onCommentClick={
                             event(TimeLineFollowingEvent.OnCommentClick)
-                        }
+                        },
+                        postModel = state.postData[it]
                     )
                 }
+
             }
 
 
+
+
+        }
+
+        Column(modifier = Modifier.align(Alignment.BottomCenter)
+            .padding(medium),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        )
+        {
+            NavigationButton(event=event, state = state)
         }
 
 
@@ -174,7 +198,13 @@ fun TimeLineFollowing(
                 },
                 properties = BottomSheetDialogProperties()
             ) {
-                SheetComment()
+                SheetComment(
+                    imogy = state.imgoy,
+                    commentValue = state.commentValue,
+                    onCommentChange = {
+                        event(TimeLineFollowingEvent.OnCommentChange(it))
+                    }
+                )
 
             }
         }

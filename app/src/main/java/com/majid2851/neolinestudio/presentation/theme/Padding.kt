@@ -34,9 +34,8 @@ object Padding {
     /** 64dp */
     val extraLarge: Dp @Composable get() = 64.sdp
 
-    val veryExtraLarge: Dp @Composable get() = 154.sdp
+    val veryExtraLarge: Dp @Composable get() =86.sdp
 
-    val veryExtraLarge2: Dp @Composable get() = 200.sdp
 }
 
 val LocalPadding = compositionLocalOf { Padding }

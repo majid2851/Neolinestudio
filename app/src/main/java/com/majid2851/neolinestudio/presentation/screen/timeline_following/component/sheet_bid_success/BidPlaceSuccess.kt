@@ -16,7 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight.Companion.Bold
 import com.majid2851.neolinestudio.R
 import com.majid2851.neolinestudio.presentation.component.ImgBox
-import com.majid2851.neolinestudio.presentation.screen.timeline_following.component.sheet_bid.BidSubmit
+import com.majid2851.neolinestudio.presentation.screen.timeline_following.component.sheet_place_bid.BidSubmit
 import com.majid2851.neolinestudio.presentation.theme.Black
 import com.majid2851.neolinestudio.presentation.theme.Black14
 import com.majid2851.neolinestudio.presentation.theme.Dimen
