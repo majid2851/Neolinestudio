@@ -17,6 +17,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import com.majid2851.neolinestudio.presentation.theme.Dimen.HighCorner
 import com.majid2851.neolinestudio.presentation.theme.Dimen.LineSeperator
 import com.majid2851.neolinestudio.presentation.theme.Dimen.MediumCorner
@@ -80,7 +81,7 @@ fun PostDate(
                         }
                         .background(
                             shape = RoundedCornerShape(HighCorner),
-                            brush =MyBush
+                            brush = MyBush
                         )
                         .align(Alignment.CenterEnd)
                 )
@@ -103,5 +104,15 @@ fun PostDate(
     }
 
 
+
+}
+
+@Composable
+@Preview
+fun PostDatePreview()
+{
+    PostDate(show = true) {
+        
+    }
 
 }

@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight.Companion.Bold
+import androidx.compose.ui.tooling.preview.Preview
 import com.majid2851.neolinestudio.R
 import com.majid2851.neolinestudio.presentation.component.ImgBox
 import com.majid2851.neolinestudio.presentation.screen.timeline_following.component.sheet_place_bid.BidSubmit
@@ -94,4 +95,13 @@ fun BidPlaceSuccess(
 
 
 
+}
+
+@Composable
+@Preview
+fun BidPlaceSuccessPreview()
+{
+    BidPlaceSuccess (
+        onBackHomeClick = {}
+    )
 }

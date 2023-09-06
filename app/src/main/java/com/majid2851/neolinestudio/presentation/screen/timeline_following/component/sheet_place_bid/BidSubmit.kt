@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import com.majid2851.neolinestudio.presentation.theme.Dimen
 import com.majid2851.neolinestudio.presentation.theme.PinkF3
 import com.majid2851.neolinestudio.presentation.theme.White
@@ -56,5 +57,17 @@ fun BidSubmit(
 
 
     }
+
+}
+
+@Preview
+@Composable
+
+fun BidSubmitPreview()
+{
+    BidSubmit(
+        onSubmitClick={},
+        title="Submit"
+    )
 
 }

@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import com.majid2851.neolinestudio.presentation.screen.timeline_following.component.sheet_place_bid.custom_keyboard.CustomKeyboard
 import com.majid2851.neolinestudio.presentation.theme.Black
 import com.majid2851.neolinestudio.presentation.theme.Black14
@@ -119,8 +120,19 @@ fun BidSheet(
         )
     }
 
+}
 
-
-
+@Composable
+@Preview
+fun BidSheetPreview()
+{
+    BidSheet(
+        offerFieldFocused=true,
+        onOfferFieldFocus={},
+        newPriceValue="26",
+        onNumClick={},
+        onDeleteClick={},
+        onSubmitBidClick={}
+    )
 
 }

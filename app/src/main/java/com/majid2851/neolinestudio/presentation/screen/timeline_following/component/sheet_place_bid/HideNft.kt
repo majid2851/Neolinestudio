@@ -13,6 +13,7 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
+import androidx.compose.ui.tooling.preview.Preview
 import com.majid2851.neolinestudio.R
 import com.majid2851.neolinestudio.presentation.component.ImgBox
 import com.majid2851.neolinestudio.presentation.theme.Dimen.BidHideNft
@@ -68,4 +69,11 @@ fun HideNft()
 
 
     }
+}
+
+@Composable
+@Preview
+fun HideNftPreview()
+{
+    HideNft()
 }

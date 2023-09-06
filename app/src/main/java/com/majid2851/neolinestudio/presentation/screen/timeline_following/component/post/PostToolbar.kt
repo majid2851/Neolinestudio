@@ -16,7 +16,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import com.majid2851.neolinestudio.R
+import com.majid2851.neolinestudio.data.local.timeline_following.postListData
 import com.majid2851.neolinestudio.domain.model.PostData
 import com.majid2851.neolinestudio.presentation.component.ImgBox
 import com.majid2851.neolinestudio.presentation.theme.Dimen
@@ -49,7 +51,7 @@ fun PostToolbar(postModel: PostData)
                     shape = RoundedCornerShape(Dimen.VeryHighCorner),
                     brush = MyBush
 
-                    )
+                )
         )
         {
             ImgBox(img = postModel.profileImg)
@@ -143,4 +145,11 @@ fun PostToolbar(postModel: PostData)
 
 
 
+}
+
+@Composable
+@Preview
+fun PostToolbarPreview()
+{
+    PostToolbar(postModel = postListData.get(0) )
 }

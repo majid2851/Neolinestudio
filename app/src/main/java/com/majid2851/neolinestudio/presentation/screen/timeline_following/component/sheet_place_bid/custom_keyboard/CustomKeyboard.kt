@@ -11,11 +11,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import com.majid2851.neolinestudio.R
 import com.majid2851.neolinestudio.presentation.component.ImgBox
 import com.majid2851.neolinestudio.presentation.theme.Black
 import com.majid2851.neolinestudio.presentation.theme.Dimen
 import com.majid2851.neolinestudio.presentation.theme.Dimen.KeySymbolWidth
+import com.majid2851.neolinestudio.presentation.theme.White_Alpha30
 import com.majid2851.personalwallet.presentation.theme.ABC
 import com.majid2851.personalwallet.presentation.theme.DEF
 import com.majid2851.personalwallet.presentation.theme.GHI
@@ -141,8 +143,14 @@ fun CustomKeyboard(
 
         }
     }
-
-
-
-
+}
+@Composable
+@Preview
+fun CustomKeyboardPreview()
+{
+    CustomKeyboard(
+        offerFieldFocused=true,
+        onNumClick={},
+        onDeleteClick={}
+    )
 }

@@ -20,6 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import com.majid2851.neolinestudio.R
 import com.majid2851.neolinestudio.presentation.component.ImgBox
 import com.majid2851.neolinestudio.presentation.theme.Black0D
@@ -130,5 +131,14 @@ fun AddComment(
     }
 
 
+
+}
+@Composable
+@Preview
+fun AddCommentPreview()
+{
+    AddComment(
+        commentValue = "commentValue"
+        , onCommentChange ={} )
 
 }

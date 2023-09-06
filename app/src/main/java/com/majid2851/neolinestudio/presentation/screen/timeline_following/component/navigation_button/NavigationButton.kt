@@ -7,6 +7,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import com.majid2851.neolinestudio.R
 import com.majid2851.neolinestudio.presentation.theme.Dimen.NavigationButtonHeight
 import com.majid2851.neolinestudio.presentation.theme.Dimen.VeryHighCorner2
@@ -78,11 +79,19 @@ fun NavigationButton(
             onNavClick = {
                 event(TimeLineFollowingEvent.OnNavProfileClick)
             },
-            noTint = true
+            noTint = true////i used this paramter for not using tint for profile Image
         )
 
 
     }
 
 
+}
+
+@Composable
+@Preview
+fun NavigationButtonPreview()
+{
+    val state=TimeLineFollowingState()
+    NavigationButton(state = state, event = {})
 }

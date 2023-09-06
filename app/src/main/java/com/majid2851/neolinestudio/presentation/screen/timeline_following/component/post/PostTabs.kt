@@ -3,7 +3,9 @@ package com.majid2851.neolinestudio.presentation.screen.timeline_following.compo
 import androidx.compose.foundation.layout.Row
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.tooling.preview.Preview
 import com.majid2851.neolinestudio.R
+import com.majid2851.neolinestudio.data.local.timeline_following.postListData
 import com.majid2851.neolinestudio.domain.model.PostData
 
 @Composable
@@ -45,5 +47,14 @@ fun PostTabs(
 
     }
 
+
+}
+@Composable
+@Preview
+fun PostTabsPreview()
+{
+    PostTabs(
+        onCommentClick = {  },
+        postModel = postListData.get(0) )
 
 }

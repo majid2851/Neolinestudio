@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.tooling.preview.Preview
 import com.majid2851.personalwallet.presentation.screens.main_page.accounts.ui.TimeLineFollowingState
 import com.majid2851.personalwallet.presentation.theme.St_Following
 import com.majid2851.personalwallet.presentation.theme.St_ForYou
@@ -49,12 +50,18 @@ fun TopCats(
 
     }
 
+}
+@Composable
+@Preview
+fun TopCatsPreview() {
 
-
-
-
-
-
-
-
+    val sampleState = TimeLineFollowingState(
+        followingCat = true
+    )
+    TopCats(
+        state = sampleState,
+        onFollowingClick = {  },
+        onForYouClick = {  },
+        onTrendingClick = {  }
+    )
 }

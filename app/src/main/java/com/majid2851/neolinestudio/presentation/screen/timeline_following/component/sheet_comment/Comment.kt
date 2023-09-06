@@ -16,6 +16,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import com.majid2851.neolinestudio.R
 import com.majid2851.neolinestudio.presentation.component.ImgBox
 import com.majid2851.neolinestudio.presentation.theme.Dimen
@@ -117,4 +118,11 @@ fun Comment()
 
 
     }
+}
+
+@Composable
+@Preview
+fun CommentPreview()
+{
+    Comment()
 }

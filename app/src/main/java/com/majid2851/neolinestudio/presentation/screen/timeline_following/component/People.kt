@@ -17,8 +17,11 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
+import com.majid2851.neolinestudio.data.local.timeline_following.fakePeopleData
 import com.majid2851.neolinestudio.presentation.component.ImgBox
+import com.majid2851.neolinestudio.presentation.theme.Black
 import com.majid2851.neolinestudio.presentation.theme.Dimen.BorderMediumWidth
 import com.majid2851.neolinestudio.presentation.theme.Dimen.HighCorner
 import com.majid2851.neolinestudio.presentation.theme.Dimen.MediumCorner
@@ -29,6 +32,7 @@ import com.majid2851.neolinestudio.presentation.theme.PinkED
 import com.majid2851.neolinestudio.presentation.theme.PinkF3
 import com.majid2851.neolinestudio.presentation.theme.White
 import com.majid2851.neolinestudio.presentation.theme.proDisplay
+import com.majid2851.personalwallet.presentation.screens.main_page.accounts.ui.TimeLineFollowingState
 import com.majid2851.personalwallet.presentation.theme.Fonts_Equal_13px
 import com.walletline.android.presentation.theme.Padding.medium
 import com.walletline.android.presentation.theme.Padding.small
@@ -100,5 +104,23 @@ fun People(
         )
     }
 
+}
+
+@Preview
+@Composable
+fun PeoplePreview()
+{
+    val sampleState = TimeLineFollowingState(
+        people = fakePeopleData
+    )
+
+    People(
+        img = sampleState.people[0].img,
+        name = sampleState.people[0].name,
+        backgroundColor = Black,
+        onItemClick = {
+
+        }
+    )
 }
 

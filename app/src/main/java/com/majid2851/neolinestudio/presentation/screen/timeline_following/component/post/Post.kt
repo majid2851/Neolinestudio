@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import com.majid2851.neolinestudio.data.local.timeline_following.postListData
 import com.majid2851.neolinestudio.domain.model.PostData
 import com.majid2851.neolinestudio.presentation.theme.Black14
 import com.majid2851.neolinestudio.presentation.theme.Dimen.MediumCorner
@@ -59,4 +61,16 @@ fun Post(
 
 
 
+}
+
+@Composable
+@Preview
+fun PostPreview()
+{
+    Post(
+        postModel = postListData.get(0),
+        showBid = true,
+        onBidClick = {},
+        onCommentClick = {}
+    )
 }

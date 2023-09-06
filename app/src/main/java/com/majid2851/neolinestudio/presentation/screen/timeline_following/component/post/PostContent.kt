@@ -7,7 +7,9 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
+import androidx.compose.ui.tooling.preview.Preview
 import com.majid2851.neolinestudio.R
+import com.majid2851.neolinestudio.data.local.timeline_following.postListData
 import com.majid2851.neolinestudio.domain.model.PostData
 import com.majid2851.neolinestudio.presentation.component.ImgBox
 import com.majid2851.neolinestudio.presentation.theme.Blue03
@@ -88,4 +90,11 @@ fun PostContent(
 
 
 
+}
+
+@Composable
+@Preview
+fun PostContentPreview()
+{
+    PostContent(postModel = postListData.get(0))
 }

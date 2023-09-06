@@ -22,6 +22,7 @@ import androidx.compose.ui.focus.onFocusEvent
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import com.majid2851.neolinestudio.R
 import com.majid2851.neolinestudio.presentation.component.ImgBox
 import com.majid2851.neolinestudio.presentation.theme.Dimen.BidFieldHeight
@@ -217,4 +218,16 @@ fun BidFields(
         title = St_SubmitBid
     )
 
+}
+
+@Preview
+@Composable
+fun BidFieldsPreview()
+{
+    BidFields(
+        newPrice="46",
+        offerFieldFocused=true,
+        onOfferFieldFocuse={},
+        onSubmitBidClick={}
+    )
 }

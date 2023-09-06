@@ -15,9 +15,12 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import com.holix.android.bottomsheetdialog.compose.BottomSheetDialog
 import com.holix.android.bottomsheetdialog.compose.BottomSheetDialogProperties
 import com.majid2851.neolinestudio.R
+import com.majid2851.neolinestudio.data.local.timeline_following.fakePeopleData
+import com.majid2851.neolinestudio.data.local.timeline_following.postListData
 import com.majid2851.neolinestudio.presentation.screen.timeline_following.component.People
 import com.majid2851.neolinestudio.presentation.screen.timeline_following.component.TopCats
 import com.majid2851.neolinestudio.presentation.screen.timeline_following.component.TopToolbar
@@ -138,7 +141,7 @@ fun TimeLineFollowing(
         }
 
 
-
+        //Checks to Show PlaceBid Sheet
         if (state.isPlaceBidSheetOpen==true)
         {
             BottomSheetDialog(
@@ -172,6 +175,7 @@ fun TimeLineFollowing(
 
             }
         }
+        //Check to show PlacedBidSheedSucess Msg
         if (state.isPlacedBidSheetSuccessOpen==true)
         {
             BottomSheetDialog(
@@ -190,6 +194,7 @@ fun TimeLineFollowing(
             }
         }
 
+        //Checks to show CommentSheet
         if (state.isCommentSheetOpen==true)
         {
             BottomSheetDialog(
@@ -215,4 +220,21 @@ fun TimeLineFollowing(
 
 
 
+}
+
+@Composable
+@Preview
+fun TimeLineFollowingPreview() {
+    val sampleState = TimeLineFollowingState(
+        postData = postListData,
+        people = fakePeopleData,
+        newPriceValue = "233",
+        followingCat = true,
+        navHomeState = true,
+
+    )
+    TimeLineFollowing(
+        state = sampleState,
+        event = { }
+    )
 }

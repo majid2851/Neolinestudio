@@ -13,6 +13,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import com.majid2851.neolinestudio.presentation.theme.Black14
 import com.majid2851.neolinestudio.presentation.theme.Dimen.HighCorner
 import com.majid2851.neolinestudio.presentation.theme.Dimen.TopCatsItemHeight
@@ -68,4 +69,14 @@ fun TopCatsItem(
 
     }
 
+}
+@Preview
+@Composable
+fun TopCatsItemPreview()
+{
+    TopCatsItem(
+        title="Title",
+        catStatus=true,
+        onItemClick={}
+    )
 }

@@ -14,8 +14,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import com.majid2851.neolinestudio.R
 import com.majid2851.neolinestudio.presentation.component.ImgBox
+import com.majid2851.neolinestudio.presentation.screen.timeline_following.component.sheet_place_bid.custom_keyboard.CustomKeyboard
 import com.majid2851.neolinestudio.presentation.theme.Dimen.ImogyIconSize
 import com.majid2851.neolinestudio.presentation.theme.Dimen.LineSeperator
 import com.majid2851.neolinestudio.presentation.theme.White
@@ -89,5 +91,12 @@ fun Reactions(imogy:String)
 
     }
 
-
+}
+@Composable
+@Preview
+fun ReactionPreview()
+{
+    Reactions(
+        imogy = "\uD83D\uDE18"
+    )
 }

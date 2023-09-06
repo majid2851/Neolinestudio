@@ -14,6 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import com.majid2851.neolinestudio.presentation.theme.White_Alpha30
 import com.majid2851.neolinestudio.presentation.theme.Dimen.KeyHeight
 import com.majid2851.neolinestudio.presentation.theme.Dimen.KeyWidth
@@ -77,4 +78,16 @@ fun Key(
     }
 
 
+}
+
+@Composable
+@Preview
+fun KeyPreview()
+{
+    Key(
+        number="2",
+        textValue="ABC",
+        backgroundColor=White_Alpha30,
+        onNumClick={}
+    )
 }
